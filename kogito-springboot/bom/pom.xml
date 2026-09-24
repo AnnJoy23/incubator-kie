@@ -42,12 +42,12 @@
     <version.org.springframework>7.0.9</version.org.springframework>
     <version.org.springframework.boot>4.1.1</version.org.springframework.boot>
     <version.org.springframework.cloud>2025.1.2</version.org.springframework.cloud>
-    <!-- CVE-2026-49844: Spring Boot 4.0.7 sets log4j2.version=2.25.4 which is vulnerable.
+    <!-- CVE-2026-49844: Spring Boot 4.1.1 sets log4j2.version=2.25.5 which is vulnerable.
          Override the version property inherited from kie-parent to 2.26.1 (minimum 2.25.5).
          https://logging.apache.org/security.html#CVE-2026-49844 -->
     <version.org.apache.logging.log4j>2.26.1</version.org.apache.logging.log4j>
     <!-- CVE-2026-59889: force-pin jackson-databind to 3.1.6.
-         spring-boot-dependencies:4.0.8 carries the vulnerable jackson-databind:3.1.5.
+         spring-boot-dependencies:4.1.1 carries the vulnerable jackson-databind:3.1.5.
          Remove this pin once spring-boot-dependencies imports jackson-databind >= 3.1.6. -->
     <version.tools.jackson.core>3.1.6</version.tools.jackson.core>
     <!-- Framework-specific pins moved out of kie-parent: only this tree declares these artifacts. -->
@@ -85,8 +85,8 @@
         <type>pom</type>
         <scope>import</scope>
       </dependency>
-      <!-- CVE fix: spring-boot-dependencies:4.0.x imports mongodb-driver-bom:5.6.5 which pins
-           mongodb-driver-core and bson to 5.6.5. Override to match mongodb-driver-sync:5.9.2.
+      <!-- CVE fix: spring-boot-dependencies:4.1.1 imports mongodb-driver-bom:5.8.1 which pins
+           mongodb-driver-core and bson to 5.8.1. Override to match mongodb-driver-sync:5.9.2.
            https://jira.mongodb.org/browse/JAVA-6266 -->
       <dependency>
         <groupId>org.mongodb</groupId>
