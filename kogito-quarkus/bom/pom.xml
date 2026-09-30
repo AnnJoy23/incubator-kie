@@ -55,8 +55,8 @@
     <!-- quarkus-bom alignment; smallrye-open-api 4.2.4 requires jandex 3.5, so it is pinned in the same scope as jandex. -->
     <version.io.smallrye-open-api>4.2.4</version.io.smallrye-open-api>
     <version.io.smallrye.openapi.core>4.2.4</version.io.smallrye.openapi.core>
-   <!-- Override: quarkus-bom 3.33.4 ships MongoDB driver 5.6.4; pin to 5.9.2. -->
-    <version.mongodb-driver-sync>5.9.2</version.mongodb-driver-sync>
+   <!-- CVE-2026-18710 (JAVA-6266): quarkus-bom 3.33.4 ships MongoDB driver 5.6.4; pin to 5.11.1. Remove when quarkus-bom ships >= 5.11.1. -->
+    <version.mongodb-driver-sync>5.11.1</version.mongodb-driver-sync>
     <!-- Framework-specific pins moved out of kie-parent: only this tree declares these artifacts. -->
     <version.io.smallrye-health>4.3.0</version.io.smallrye-health>
     <version.com.github.stephenc.jcip>1.0-1</version.com.github.stephenc.jcip>
@@ -154,9 +154,10 @@
         <artifactId>reactor-core</artifactId>
         <version>${version.io.projectreactor}</version>
       </dependency>
-      <!-- Override: quarkus-bom:3.33.4 ships MongoDB driver artifacts at 5.6.4.
-           Pin to 5.9.2 (version.mongodb-driver-sync). Must appear before the quarkus-bom
-           import to take precedence (first explicit entry wins in Maven dependencyManagement). -->
+      <!-- CVE-2026-18710 (JAVA-6266): quarkus-bom:3.33.4 ships MongoDB driver artifacts at 5.6.4.
+           Pin to 5.11.1 (version.mongodb-driver-sync). Remove when quarkus-bom ships >= 5.11.1.
+           Must appear before the quarkus-bom import to take precedence
+           (first explicit entry wins in Maven dependencyManagement). -->
       <dependency>
         <groupId>org.mongodb</groupId>
         <artifactId>mongodb-driver-sync</artifactId>
