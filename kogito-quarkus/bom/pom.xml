@@ -55,8 +55,6 @@
     <!-- quarkus-bom alignment; smallrye-open-api 4.2.4 requires jandex 3.5, so it is pinned in the same scope as jandex. -->
     <version.io.smallrye-open-api>4.2.4</version.io.smallrye-open-api>
     <version.io.smallrye.openapi.core>4.2.4</version.io.smallrye.openapi.core>
-   <!-- CVE-2026-18710 (JAVA-6266): quarkus-bom 3.33.4 ships MongoDB driver 5.6.4; pin to 5.11.1. Remove when quarkus-bom ships >= 5.11.1. -->
-    <version.mongodb-driver-sync>5.11.1</version.mongodb-driver-sync>
     <!-- Framework-specific pins moved out of kie-parent: only this tree declares these artifacts. -->
     <version.io.smallrye-health>4.3.0</version.io.smallrye-health>
     <version.com.github.stephenc.jcip>1.0-1</version.com.github.stephenc.jcip>
