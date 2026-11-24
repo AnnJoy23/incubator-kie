@@ -336,7 +336,7 @@
           <plugin>
             <groupId>org.openrewrite.maven</groupId>
             <artifactId>rewrite-maven-plugin</artifactId>
-            <version>4.42.0</version>
+            <version>5.47.3</version>
             <configuration>
               <activeRecipes>
                 <!--                <recipe>org.drools.rewrite.PrintStackTraceToLogError</recipe>-->
