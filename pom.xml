@@ -354,7 +354,7 @@
                 <!--                <artifactId>rewrite-logging-frameworks</artifactId>-->
                 <!--                <version>1.8.0</version>-->
                 <artifactId>rewrite-testing-frameworks</artifactId>
-                <version>1.23.0</version>
+                <version>3.44.0</version>
               </dependency>
             </dependencies>
           </plugin>
